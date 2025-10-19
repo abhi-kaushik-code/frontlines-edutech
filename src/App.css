@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Buttons */
+.btn {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-600 transition;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-clear {
+  @apply bg-gray-300 text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-gray-400 transition;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Table */
+.table-base {
+  @apply border-collapse border border-slate-400 w-full table-fixed text-sm md:text-base;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.table-header {
+  @apply bg-blue-500 text-white cursor-pointer select-none text-center;
 }
 
-.App-link {
-  color: #61dafb;
+.table-cell {
+  @apply border border-slate-300 px-3 py-2 text-center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-row {
+  @apply transition-colors;
+}
+
+.table-row-odd {
+  @apply bg-white;
+}
+
+.table-row-even {
+  @apply bg-gray-200;
+}
+
+.table-row-hover {
+  @apply hover:bg-gray-100;
+}
+
+.input-base {
+  @apply border border-gray-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+.filter-container {
+  @apply flex flex-wrap gap-4 mb-6 justify-center;
+}
+
+.loader {
+  @apply text-center py-4 text-gray-500;
 }
